@@ -16,7 +16,7 @@ public class Parser implements IParser {
 		scnr = new Scanner(text);
 	}
 	
-	public LinkedList<LinkedList<String>> Parse(String file) {
+	public LinkedList<Chapter> Parse(String file) {
 		// TODO Auto-generated method stub
 		return null;
 	}

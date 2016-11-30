@@ -1,6 +1,6 @@
 package article_parser;
 
-public interface IArticle {
+public interface IArticleOps {
 	
 	// takes file location and returns Article obj.
 	public void read_file(String path);

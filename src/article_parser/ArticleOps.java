@@ -1,6 +1,6 @@
 package article_parser;
 
-public class Article implements IArticle {
+public class ArticleOps implements IArticleOps {
 
 
 	public void read_file(String path) {
