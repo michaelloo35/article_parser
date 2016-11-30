@@ -11,19 +11,16 @@ public class Parser implements IParser {
 	public String textfile;
 	
 	
-	public Parser(String path){
+	public Parser(String path)throws FileNotFoundException{
 		text = new File(path);
+		scnr = new Scanner(text);
 	}
-	@Override
+	
 	public LinkedList<LinkedList<String>> Parse(String file) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	// converting file into string
-	public void read()throws FileNotFoundException{
-		scnr = new Scanner(text);
-	}
 	//deletes (-) at the end of a line
 	//private String merge_lines(String text){
 		
