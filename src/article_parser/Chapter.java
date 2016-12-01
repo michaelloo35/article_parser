@@ -5,15 +5,13 @@ import java.util.LinkedList;
 public class Chapter {
 	int articleStartNO;
 	int articleEndNO;
-	String chapterTitle1;
-	String chapterTitle2;
+	String chapterTitle;
 	LinkedList<String> Articles = new LinkedList<>();
 
-	public Chapter(int startingArticleNO,String title1,String title2) {
+	public Chapter(int startingArticleNO,String title1) {
 		this.articleStartNO = startingArticleNO;
 		this.articleEndNO = 0;
-		this.chapterTitle1 = title1;
-		this.chapterTitle2 = title2;
+		this.chapterTitle = title1;
 	}
 	public void UpdateChapter(int endingArticleNo){
 		this.articleEndNO = endingArticleNo;

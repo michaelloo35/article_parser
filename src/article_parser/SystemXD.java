@@ -8,9 +8,13 @@ public class SystemXD {
 			String A = "konstytucja.txt";
 			Parser a = new Parser(A);
 			a.Parse();
-			Chapter test;
-			test = a.textfile.getFirst();
-			System.out.println(test.chapterTitle1);
+			for ( Chapter i : a.textfile){
+				System.out.println(i.chapterTitle);
+				for (String s : i.Articles){
+					System.out.println(s);
+				}
+				
+			}
 		} catch (FileNotFoundException e) {
 			System.out.println("nie ma takiego pliku");
 		}
