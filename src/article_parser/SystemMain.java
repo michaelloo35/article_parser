@@ -1,6 +1,6 @@
 package article_parser;
 import java.io.FileNotFoundException;
-public class SystemXD {
+public class SystemMain {
 
 	public static void main(String[] args) {
 
@@ -13,13 +13,11 @@ public class SystemXD {
 				for (String s : i.Articles){
 					System.out.println(s);
 				}
-				
 			}
+
 		} catch (FileNotFoundException e) {
 			System.out.println("nie ma takiego pliku");
 		}
-	
-
 	}
 
 }

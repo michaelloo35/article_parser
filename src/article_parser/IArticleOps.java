@@ -3,12 +3,12 @@ package article_parser;
 public interface IArticleOps {
 	
 	// takes file location and returns Article obj.
-	public void read_file(String path);
+	 void readFile(String path);
 	
 	//method reads string "n - m" or single number "n" printing article/articles group
-	public void view_articles(String range);
+	 void view_articles(String range);
 	
 	//method prints chapter a including articles inside
-	public void view_chapter(int a);
+	 void view_chapter(int a);
 	
 }

@@ -6,9 +6,9 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Parser implements IParser {
-
-	public File text;
-	public Scanner scnr;
+	public int lolo = 0;
+	private File text;
+	private Scanner scnr;
 	public LinkedList<Chapter> textfile;
 
 	public Parser(String path) throws FileNotFoundException {
@@ -23,15 +23,15 @@ public class Parser implements IParser {
 		int chapterIterator = 0;
 		String temp;
 		Chapter temp2 = new Chapter(666, "nie dziala");
-		boolean skip = true; // skipujemy pierwsz¹ czêœæ dokumentu
+		boolean skip = true; // skipujemy pierwsz¹ czêœæ dokumentu // PODZIELIC NA POD METODY
 		boolean isFirst = false; // przed dodaniem pierwszego artykulu w kazdym
 									// chapterze nie mozemy inkrementowac
 									// articleIterator
 		while (this.scnr.hasNext() == true) {
 			temp = this.scnr.nextLine();
-			if (temp.matches("^2...-..-..") || temp.matches("^©Kancelaria Sejmu"))
-				this.scnr.nextLine(); // trafilsimy na niepotrzebne wyraznie
-										// pomijamy
+			if (temp.matches("^2...-..-..") || temp.matches("^©Kancelaria Sejmu"));
+				 // trafilsimy na niepotrzebne wyraznie pomijamy
+										
 			else if (!skip) {
 				if (temp.matches("^Rozdzia³.*")) { // sprawdzamy czy trafilismy
 													// jak rozdzial jestli tak
@@ -56,7 +56,7 @@ public class Parser implements IParser {
 					if (isFirst == false)	{				// w pierwszym artykule rozdzia³u nie mozemy zwiekszac licznika
 						articleIterator++;
 						temp2.Articles.add(temp);
-						temp2.UpdateChapter(articleIterator);
+						temp2.SetArticleEndNO(articleIterator);
 					}
 					else {
 						isFirst = false;
@@ -71,6 +71,8 @@ public class Parser implements IParser {
 					skip = false;
 			}
 		}
+		chapterIterator++;
+		this.textfile.add(temp2);
 	}
 
 }
