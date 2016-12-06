@@ -14,7 +14,7 @@ public class SystemMain {
 					System.out.println(s);
 				}
 			}
-
+			
 		} catch (FileNotFoundException e) {
 			System.out.println("nie ma takiego pliku");
 		}
