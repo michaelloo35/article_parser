@@ -6,7 +6,6 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Parser implements IParser {
-	public int lolo = 0;
 	private File text;
 	private Scanner scnr;
 	public LinkedList<Chapter> textfile;
