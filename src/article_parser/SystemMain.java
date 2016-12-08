@@ -7,7 +7,7 @@ public class SystemMain {
 		try {
 			String A = "konstytucja.txt";
 			Constitution.readFile(A);
-			Constitution.view("");
+			Constitution.view("a242");
 			
 		} catch (FileNotFoundException e) {
 			System.out.println("nie ma takiego pliku");
@@ -15,6 +15,9 @@ public class SystemMain {
 		  catch(IllegalArgumentException e){
 			System.out.println(e);
 		}
+		  catch(IndexOutOfBoundsException e){
+			  System.out.println("plik posiada niedozwolon¹ strukturê");
+		  }
 	}
 
 }

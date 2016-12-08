@@ -19,7 +19,7 @@ public class Constitution {
 			throw new IllegalArgumentException("Niepoprawny argument wybierz rozdzia³ zaczynaj¹c od litery c lub artyku³/y od litery a");
 	}
 
-	private static void view_articles(String argument) {
+	private static void view_articles(String argument) throws IndexOutOfBoundsException{
 		argument = argument.replaceAll("[^\\d,-]", "");
 		if (argument.isEmpty())
 			throw new IllegalArgumentException("brak numeru/zakresu artyku³ów");
@@ -67,7 +67,7 @@ public class Constitution {
 
 	}
 
-	private static void view_chapter(String argument) throws NumberFormatException {
+	private static void view_chapter(String argument) throws NumberFormatException,IndexOutOfBoundsException {
 		int a;
 		argument = argument.replaceAll("[^\\d]", "");
 		if (argument.isEmpty())

@@ -21,7 +21,7 @@ public class Parser implements IParser {
 		int articleIterator = 0;
 		int chapterIterator = 0;
 		String temp;
-		Chapter temp2 = new Chapter(666, "nie dziala");
+		Chapter temp2 = new Chapter(666, "plik nie posiada ¿adnego rozdzia³u");
 		boolean skip = true; // skipujemy pierwsz¹ czêœæ dokumentu 
 		boolean isFirst = false; // przed dodaniem pierwszego artykulu w kazdym
 									// chapterze nie mozemy
@@ -86,6 +86,8 @@ public class Parser implements IParser {
 	private void AddLineToArticle(Chapter chapter, String line) {
 		if (line.matches(".*-$"))
 			line = line.substring(0, line.length() - 1);
+		else
+			line = line + " ";
 		if (line.matches("^\\d[)].*|^\\d[.].*"))
 			line = "\n" + line;
 		chapter.Articles.set(chapter.Articles.size() - 1, chapter.Articles.getLast() + line);
